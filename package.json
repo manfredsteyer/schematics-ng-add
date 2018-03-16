@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/ng-packagr/package.schema.json",
   "name": "@my/logger-lib",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "schematics": "./schematics/collection.json",
   "ngPackage": {
