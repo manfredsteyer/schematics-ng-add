@@ -19,7 +19,7 @@ export function addDeclarationToAppModule(appModule: string): Rule {
       const sourceText = text.toString('utf-8');
       const source = ts.createSourceFile(modulePath, sourceText, ts.ScriptTarget.Latest, true);
   
-      const changes = addSymbolToNgModuleMetadata(source, modulePath, 'imports', 'LoggerModule', 'logger-lib', 'LoggerModule.forRoot({ enableDebug: true })');
+      const changes = addSymbolToNgModuleMetadata(source, modulePath, 'imports', 'LoggerModule', '@my/logger-lib', 'LoggerModule.forRoot({ enableDebug: true })');
 
       const recorder = host.beginUpdate(modulePath);
       for (const change of changes) {
