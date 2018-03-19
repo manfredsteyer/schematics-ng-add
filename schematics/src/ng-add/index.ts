@@ -1,4 +1,4 @@
-import { Rule, SchematicContext, Tree, chain, branchAndMerge } from '@angular-devkit/schematics';
+import { Rule, SchematicContext, Tree, branchAndMerge } from '@angular-devkit/schematics';
 import { addDeclarationToAppModule } from './add-declaration-to-module.rule';
 
 
@@ -7,17 +7,8 @@ import { addDeclarationToAppModule } from './add-declaration-to-module.rule';
 export function ngAdd(options: any): Rule {
   
   return (tree: Tree, _context: SchematicContext) => {
-
-    tree.create('hello.txt', 'Hello World!');
-
     const appModule = '/src/app/app.module.ts';
-
-    return chain([
-      branchAndMerge(chain([
-        addDeclarationToAppModule(appModule)
-      ])),
-    ])(tree, _context);
-
-    // return tree;
+    let rule = branchAndMerge(addDeclarationToAppModule(appModule));
+    return rule(tree, _context);
   };
 }
