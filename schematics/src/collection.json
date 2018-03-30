@@ -4,6 +4,11 @@
     "ng-add": {
       "description": "Initialize Library",
       "factory": "./ng-add/index#ngAdd"
+    },
+    "update": {
+      "version": "1.0.0",
+      "description": "updates to version 1.0.0",
+      "factory": "./update/index#update"
     }
   }
 }
