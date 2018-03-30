@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/ng-packagr/package.schema.json",
   "name": "@my/logger-lib",
-  "version": "0.6.0",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "Just a demo library to show how to create an Angular library with Schematics",
   "schematics": "./schematics/collection.json",
