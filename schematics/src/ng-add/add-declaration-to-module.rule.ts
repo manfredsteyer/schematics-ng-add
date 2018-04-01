@@ -11,8 +11,7 @@ export function addDeclarationToAppModule(appModule: string): Rule {
       }
   
       const modulePath = normalize(/*'/' +*/ appModule);
-      //const modulePath = appModule;
-      console.log('modulePath', modulePath);
+
       const text = host.read(modulePath);
       if (text === null) {
         throw new SchematicsException(`File ${modulePath} does not exist.`);

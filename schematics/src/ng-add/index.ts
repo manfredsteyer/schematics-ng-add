@@ -1,13 +1,13 @@
 import { Rule, SchematicContext, Tree, branchAndMerge } from '@angular-devkit/schematics';
 import { addDeclarationToAppModule } from './add-declaration-to-module.rule';
+import { NgAddOptions } from './schema';
 
-
-// You don't have to export the function as default. You can also have more than one rule factory
-// per file.
-export function ngAdd(options: any): Rule {
+export function ngAdd(options: NgAddOptions): Rule {
   return (tree: Tree, _context: SchematicContext) => {
-    console.log('options', options);
-    const appModule = './src/app/app.module.ts';
+
+    // For sake of simplicity, assume default folder structure 
+    let appModule = `projects/${options.project}/src/app/app.module.ts`;
+    
     let rule = branchAndMerge(addDeclarationToAppModule(appModule));
     return rule(tree, _context);
   };
