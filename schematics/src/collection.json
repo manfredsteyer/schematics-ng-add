@@ -6,8 +6,8 @@
       "factory": "./ng-add/index#ngAdd"
     },
     "update": {
-      "version": "1.0.0",
-      "description": "updates to version 1.0.0",
+      "version": "2.0.0",
+      "description": "updates to version 2.0.0",
       "factory": "./update/index#update"
     }
   }
