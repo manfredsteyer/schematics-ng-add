@@ -6,9 +6,14 @@ import { addDeclarationToAppModule } from './add-declaration-to-module.rule';
 // per file.
 export function ngAdd(options: any): Rule {
   return (tree: Tree, _context: SchematicContext) => {
+
     console.log('options', options);
+
+    // Hardcoded path for the sake of simplicity
     const appModule = './src/app/app.module.ts';
-    let rule = branchAndMerge(addDeclarationToAppModule(appModule));
+
+    const rule = branchAndMerge(addDeclarationToAppModule(appModule));
     return rule(tree, _context);
   };
+
 }
