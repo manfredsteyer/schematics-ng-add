@@ -5,6 +5,9 @@
   "license": "MIT",
   "description": "Just a demo library to show how to create an Angular library with Schematics",
   "schematics": "./schematics/collection.json",
+  "ng-update": {
+       "migrations": "./schematics/migration-collection.json"
+  },
   "ngPackage": {
     "dest": "dist/lib",
     "lib": {

@@ -1,0 +1,9 @@
+{
+  "schematics": {
+    "migration-01": {
+      "version": "3",
+      "factory": "./update/index#update",
+      "description": "updates to v3"
+    }
+  }
+}

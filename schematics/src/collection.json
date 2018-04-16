@@ -5,10 +5,8 @@
       "description": "Initialize Library",
       "factory": "./ng-add/index#ngAdd"
     },
-    "update": {
-      "version": "2.0.0",
-      "description": "updates to version 2.0.0",
-      "factory": "./update/index#update"
+    "ng-update": {
+      "migrations": "./migration-collection.json"
     }
   }
 }
